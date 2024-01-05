@@ -31,11 +31,6 @@ nav > a:hover {
 	text-decoration: underline;
 }
 
-h1 {
-	text-align: center;
-	margin-top: 0;
-}
-
 .container {
 	max-width: 900px;
 	padding-left: 2rem;
@@ -56,8 +51,31 @@ main a {
 	text-decoration: none;
 	color: var(--color-bg);
 }
+
 main a:hover {
 	text-decoration: underline;
+}
+
+footer a {
+	text-decoration: none;
+	color: var(--color-bg);
+
+	mask-image: linear-gradient(-75deg, #000 30%, rgba(0, 0, 0, 0.6) 50%, #000 70%);
+	mask-size: 200%;
+	animation: wave 3s infinite;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+@keyframes wave {
+	from {
+		-webkit-mask-position: 150%;
+	}
+	to {
+		-webkit-mask-position: -50%;
+	}
 }
 
 .active {
@@ -65,17 +83,55 @@ main a:hover {
 	cursor: default;
 }
 
+p {
+	text-align: center;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+
+	width: 100%;
+}
+
+input {
+	padding: 8px;
+
+	border: 1px solid var(--color-bg);
+	border-radius: 2px;
+}
+
+button {
+	padding: 8px;
+
+	color: white;
+	background-color: var(--color-active);
+
+	border: 1px solid var(--color-bg);
+	border-radius: 2px;
+
+	cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-align: center;
+	margin-top: 0;
+}
+
 h1 {
 	font-size: 1.5em;
-	text-align: center;
 }
 
 h2 {
 	font-size: 1.3em;
-	text-align: center;
 }
 
 h3 {
 	font-size: 1.1em;
-	text-align: center;
 }

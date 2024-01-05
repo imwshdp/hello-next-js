@@ -20,7 +20,7 @@ function BlogWithFetchByHooks() {
 
 	return (
 		<>
-			<h2>Blog (hooks fetch variation)</h2>
+			<h2>Posts (hooks fetch variation)</h2>
 			<PostsSearch onSearch={setPosts} />
 			{isLoading ? <h2>Loading blog content...</h2> : <PostsList posts={posts} />}
 		</>

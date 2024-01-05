@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 function About() {
-	return <h2>All info about our team (honestly it is all about nested routing)</h2>;
+	return <></>;
 }
 
 export default About;

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 function BlogWithFetchByStore() {
 	return (
 		<>
-			<h2>Blog (zustand store fetch variation)</h2>
+			<h2>Posts (zustand store fetch variation)</h2>
 			<PostsSearchWithStore />
 			<PostsListWithStore />
 		</>
