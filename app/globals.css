@@ -64,3 +64,18 @@ main a:hover {
 	color: var(--color-active);
 	cursor: default;
 }
+
+h1 {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.3em;
+	text-align: center;
+}
+
+h3 {
+	font-size: 1.1em;
+	text-align: center;
+}

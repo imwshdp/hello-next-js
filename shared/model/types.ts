@@ -4,3 +4,8 @@ export type PostDataType = {
 	title: string;
 	body: string;
 };
+
+export type NavLink = {
+	label: string;
+	href: string;
+};

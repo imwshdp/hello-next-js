@@ -26,7 +26,10 @@
 			"@components/*": ["./components/*"],
 
 			"@shared": ["./shared"],
-			"@shared/*": ["./shared/*"]
+			"@shared/*": ["./shared/*"],
+
+			"@store": ["./store"],
+			"@store/*": ["./store/*"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

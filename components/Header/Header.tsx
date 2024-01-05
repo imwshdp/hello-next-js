@@ -1,17 +1,13 @@
 import React from 'react';
 
-import Link from 'next/link';
+import { navItems } from '@shared/model/routes';
 
-import { routes } from '@shared/model/routes';
+import Navbar from '@components/Navbar';
 
 function Header() {
 	return (
 		<header>
-			<nav>
-				<Link href={routes.root}>Home</Link>
-				<Link href={routes.blog.root}>Blog</Link>
-				<Link href={routes.about.root}>About</Link>
-			</nav>
+			<Navbar navLinks={navItems} />
 		</header>
 	);
 }

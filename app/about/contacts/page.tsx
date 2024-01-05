@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Contacts() {
-	return <div>Contacts</div>;
+	return <div className='container'>Contacts</div>;
 }
 
 export default Contacts;
