@@ -59,7 +59,7 @@ module.exports = {
 		'simple-import-sort/imports': [
 			2,
 			{
-				groups: [['^react'], ['^\\w'], ['^@?\\w'], ['^(@?components)(/.*|$)'], ['^\\.'], ['^.+\\.?(css)$']],
+				groups: [['^next'], ['^react'], ['^\\w'], ['^@?\\w'], ['^(@?components)(/.*|$)'], ['^\\.'], ['^.+\\.?(css)$']],
 			},
 		],
 

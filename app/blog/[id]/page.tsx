@@ -1,6 +1,6 @@
-import React from 'react';
-
 import { Metadata } from 'next';
+
+import React from 'react';
 
 import { apiLinks } from '@shared/model/api';
 import { PostDataType } from '@shared/model/types';

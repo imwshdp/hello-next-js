@@ -6,6 +6,7 @@ export default function AboutLayout({ children }: { children: React.ReactNode })
 	return (
 		<section>
 			<h1>About Us</h1>
+			{children}
 			<ul>
 				<li>
 					<Link href={routes.about.contacts}>Contacts</Link>
@@ -14,7 +15,6 @@ export default function AboutLayout({ children }: { children: React.ReactNode })
 					<Link href={routes.about.team}>Team</Link>
 				</li>
 			</ul>
-			{children}
 		</section>
 	);
 }

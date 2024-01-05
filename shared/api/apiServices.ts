@@ -2,7 +2,7 @@ import { apiLinks } from '@shared/model/api';
 import { PostDataType } from '@shared/model/types';
 
 export const fetchPosts = async (): Promise<PostDataType[]> => {
-	const response = await fetch(apiLinks.getPosts, {
+	const response = await fetch(apiLinks.getPostsFromLocalDatabase, {
 		next: {
 			revalidate: 60,
 		},
@@ -11,7 +11,7 @@ export const fetchPosts = async (): Promise<PostDataType[]> => {
 };
 
 export const fetchFilteredPosts = async (search: string): Promise<PostDataType[]> => {
-	const response = await fetch(`${apiLinks.getPosts}?q=${search}`);
+	const response = await fetch(`${apiLinks.getPostsFromLocalDatabase}?q=${search}`);
 
 	if (!response.ok) throw new Error('Unable to fetch posts');
 	return response.json();

@@ -1,6 +1,6 @@
-import React from 'react';
-
 import Link from 'next/link';
+
+import React from 'react';
 
 import { routes } from '@shared/model/routes';
 import { PostDataType } from '@shared/model/types';

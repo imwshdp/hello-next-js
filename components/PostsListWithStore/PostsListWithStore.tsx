@@ -1,7 +1,8 @@
 'use client';
+import Link from 'next/link';
+
 import React, { useEffect } from 'react';
 
-import Link from 'next/link';
 import { shallow } from 'zustand/shallow';
 
 import { routes } from '@shared/model/routes';
