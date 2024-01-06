@@ -10,7 +10,7 @@ export const routes = {
 	blog: {
 		root: '/blog',
 		hooks: '/blog/hooks',
-		store: '/blog/store',
+		store: '/blog/stored',
 		new: '/blog/new',
 	},
 

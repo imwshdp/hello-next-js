@@ -157,8 +157,8 @@ h3 {
 	justify-content: center;
 	align-items: center;
 
-	width: 20vw;
-	height: 20vw;
+	width: 250px;
+	height: 250px;
 
 	overflow: hidden;
 
@@ -204,4 +204,12 @@ h3 {
 		height: 30px;
 		width: 30px;
 	}
+}
+
+.stack {
+	text-align: start;
+}
+
+.stack > li {
+	padding-left: 10px;
 }

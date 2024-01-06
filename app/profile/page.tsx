@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getServerSession } from 'next-auth';
 
 import React from 'react';
@@ -11,19 +12,21 @@ async function ProfilePage() {
 	return (
 		<div className='profile-info'>
 			<h1>Profile of {session?.user?.name}</h1>
-			{session?.user?.image ? (
-				<img
-					className='avatar'
-					src={session?.user?.image}
-					alt={`${session?.user?.name} github picture profile`}
-					title={session?.user?.name || ''}
-				/>
-			) : (
-				<div className='avatar'>
-					<Octocat />
-					<strong>404: avatar not found</strong>
-				</div>
-			)}
+			<div className='avatar' title={session?.user?.name || ''}>
+				{session?.user?.image ? (
+					<Image
+						width={250}
+						height={250}
+						src={session.user.image}
+						alt={`${session?.user?.name} github picture profile`}
+					/>
+				) : (
+					<div>
+						<Octocat />
+						<strong>404: avatar not found</strong>
+					</div>
+				)}
+			</div>
 		</div>
 	);
 }
