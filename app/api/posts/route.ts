@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-import { posts } from './posts';
+import { posts } from '@shared/data/posts';
 
 export async function GET(request: Request) {
 	const { searchParams } = new URL(request.url);

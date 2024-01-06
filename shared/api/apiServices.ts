@@ -1,5 +1,5 @@
 import { apiLinks } from '@shared/model/api';
-import { PostDataType } from '@shared/model/types';
+import { PostDataType } from '@shared/model/model';
 
 export const fetchPosts = async (): Promise<PostDataType[]> => {
 	const response = await fetch(apiLinks.getPostsFromLocalDatabase, {

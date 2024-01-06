@@ -13,6 +13,14 @@ export const routes = {
 		store: '/blog/store',
 		new: '/blog/new',
 	},
+
+	profile: {
+		root: '/profile',
+	},
+
+	login: {
+		root: '/login',
+	},
 };
 
 export const navItems = [

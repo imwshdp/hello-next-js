@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
+import { PropsWithChildren } from 'react';
+
+import AppProvider from '@components/AppProvider';
 import Footer from '@components/Footer';
 import Header from '@components/Header';
 
@@ -13,13 +16,15 @@ export const metadata: Metadata = {
 	description: 'imwshdp hello world next.js app',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: PropsWithChildren) {
 	return (
 		<html lang='en'>
 			<body className={inter.className}>
-				<Header />
-				<main className='container'>{children}</main>
-				<Footer />
+				<AppProvider>
+					<Header />
+					<main className='container'>{children}</main>
+					<Footer />
+				</AppProvider>
 			</body>
 		</html>
 	);

@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 
 import { fetchFilteredPosts, fetchPosts } from '@shared/api/apiServices';
-import { PostDataType } from '@shared/model/types';
+import { PostDataType } from '@shared/model/model';
 
 type UsePostsType = {
 	posts: PostDataType[];

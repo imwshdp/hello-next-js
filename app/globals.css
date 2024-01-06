@@ -5,6 +5,7 @@
 :root {
 	--color-bg: #2c2c32;
 	--color-active: #0f7dc6;
+	--color-active-hover: #0c619a;
 }
 
 body {
@@ -105,13 +106,17 @@ input {
 button {
 	padding: 8px;
 
-	color: white;
-	background-color: var(--color-active);
-
 	border: 1px solid var(--color-bg);
 	border-radius: 2px;
 
+	color: white;
+	background-color: var(--color-active);
 	cursor: pointer;
+	transition: all 0.3s;
+}
+
+button:not(:disabled):hover {
+	background-color: var(--color-active-hover);
 }
 
 h1,
@@ -134,4 +139,69 @@ h2 {
 
 h3 {
 	font-size: 1.1em;
+}
+
+.profile-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 100%;
+}
+
+.avatar {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 20vw;
+	height: 20vw;
+
+	overflow: hidden;
+
+	border-radius: 50%;
+	border: 2px solid transparent;
+	outline: 2px solid var(--color-bg);
+
+	svg {
+		max-width: 70%;
+		max-height: 70%;
+	}
+
+	strong {
+		width: max-content;
+		color: color-mix(in srgb, var(--color-active) 85%, #000000);
+	}
+}
+
+.login {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	gap: 10px;
+}
+
+.login-form {
+	flex-direction: column;
+	gap: 5px;
+
+	min-width: 300px;
+}
+
+.login-github {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+
+	width: 100%;
+
+	svg {
+		height: 30px;
+		width: 30px;
+	}
 }

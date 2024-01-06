@@ -1,0 +1,30 @@
+name: On push jobs
+on:
+  push:
+    branches: [master, dev, test]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm install
+      - name: Lint
+        run: npm run lint:fix && npm run lint:format
+  build:
+    needs: [lint]
+    strategy:
+      matrix:
+        version: [18.x]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.version }}
+      - name: Install dependencies
+        run: npm install
+      - name: Building project
+        run: npm run build

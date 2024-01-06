@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { fetchPosts } from '@shared/api/apiServices';
-import { PostDataType } from '@shared/model/types';
+import { PostDataType } from '@shared/model/model';
 
 import PostsList from '@components/PostsList';
 import PostsSearch from '@components/PostsSearch';

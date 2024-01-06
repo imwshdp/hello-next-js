@@ -1,5 +1,4 @@
-/* eslint-disable max-len */
-import { PostDataType } from '@shared/model/types';
+import { PostDataType } from '@shared/model/model';
 
 export const posts: PostDataType[] = [
 	{

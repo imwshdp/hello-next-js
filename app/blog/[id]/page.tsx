@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import React from 'react';
 
 import { apiLinks } from '@shared/model/api';
-import { PostDataType } from '@shared/model/types';
+import { PostDataType } from '@shared/model/model';
 
 async function getPostData(id: number): Promise<PostDataType> {
 	const response = await fetch(`${apiLinks.getPosts}/${id}`, {

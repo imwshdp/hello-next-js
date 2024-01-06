@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { GITHUB_LINK } from '@shared/data/data';
+import { GITHUB_LINK } from '@shared/data/constants';
 
 function Footer() {
 	return (

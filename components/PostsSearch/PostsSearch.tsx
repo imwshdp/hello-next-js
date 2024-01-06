@@ -2,7 +2,7 @@
 import React, { ChangeEventHandler, FormEventHandler, useState } from 'react';
 
 import { fetchFilteredPosts } from '@shared/api/apiServices';
-import { PostDataType } from '@shared/model/types';
+import { PostDataType } from '@shared/model/model';
 
 type PropsType = {
 	onSearch: (value: PostDataType[]) => void;
