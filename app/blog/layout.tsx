@@ -13,6 +13,11 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
 				<li>
 					<Link href={routes.blog.store}>See fetching variant with store</Link>
 				</li>
+				<li>
+					<Link href={routes.blog.actions}>
+						See fetching variant with server actions (be careful: works only on localhost)
+					</Link>
+				</li>
 			</ul>
 			{children}
 		</section>

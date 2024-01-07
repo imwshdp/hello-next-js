@@ -11,7 +11,8 @@ export const routes = {
 		root: '/blog',
 		hooks: '/blog/hooks',
 		store: '/blog/stored',
-		new: '/blog/new',
+		actions: '/blog/actions',
+		actionsNew: '/blog/actions/new',
 	},
 
 	profile: {

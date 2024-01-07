@@ -9,9 +9,12 @@
 		"lint": "next lint",
 		"lint:fix": "eslint -c .eslintrc.cjs . --ext .jsx,.js,.ts,.tsx --quiet --report-unused-disable-directives --fix --ignore-path ./.gitignore",
 		"lint:format": "prettier --log-level warn --write \"./**/*.{js,jsx,ts,tsx,css,scss,md,json}\" ",
-		"prepare": "npm install husky --save-dev && npx husky install"
+		"prepare": "npm install husky --save-dev && npx husky install",
+		"server": "json-server --watch db.json -p 3300",
+		"dev-with-server": "concurrently \"next dev\" \"json-server --watch db.json -p 3300\""
 	},
 	"dependencies": {
+		"json-server": "^0.17.4",
 		"next": "14.0.4",
 		"next-auth": "^4.24.5",
 		"react": "^18",

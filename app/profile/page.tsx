@@ -21,10 +21,10 @@ async function ProfilePage() {
 						alt={`${session?.user?.name} github picture profile`}
 					/>
 				) : (
-					<div>
+					<>
 						<Octocat />
 						<strong>404: avatar not found</strong>
-					</div>
+					</>
 				)}
 			</div>
 		</div>

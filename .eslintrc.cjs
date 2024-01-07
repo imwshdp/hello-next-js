@@ -38,13 +38,6 @@ module.exports = {
 		'no-console': 1,
 		'no-trailing-spaces': 2,
 		'prefer-const': 1,
-		'max-len': [
-			2,
-			{
-				code: 120,
-				ignoreStrings: true,
-			},
-		],
 		indent: [0, 'tab'],
 		semi: [1, 'always'],
 		'@typescript-eslint/no-explicit-any': [1, { ignoreRestArgs: true }],
@@ -70,11 +63,13 @@ module.exports = {
 		],
 
 		'prettier/prettier': [
-			2,
+			'error',
 			{
 				endOfLine: 'auto',
 			},
+			{
+				usePrettierrc: true,
+			},
 		],
-		'prettier/prettier': [2, {}, { usePrettierrc: true }],
 	},
 };

@@ -27,7 +27,7 @@ function LoginForm() {
 	};
 
 	return (
-		<form onSubmit={handleLogIn} className='login-form'>
+		<form onSubmit={handleLogIn} className='vertical-form'>
 			<input type='email' name='email' placeholder='user@gmail.com' required />
 			<input type='password' name='password' placeholder='0000' required />
 

@@ -5,6 +5,7 @@
 :root {
 	--color-bg: #2c2c32;
 	--color-active: #0f7dc6;
+
 	--color-active-hover: #0c619a;
 }
 
@@ -16,6 +17,14 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+a {
+	color: var(--color-bg);
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 header {
 	background-color: var(--color-bg);
 	padding: 2rem 0;
@@ -24,12 +33,7 @@ header {
 
 nav > a {
 	color: white;
-	text-decoration: none;
 	padding: 0 1rem;
-}
-
-nav > a:hover {
-	text-decoration: underline;
 }
 
 .container {
@@ -48,26 +52,10 @@ main {
 	padding-bottom: 1.5rem;
 }
 
-main a {
-	text-decoration: none;
-	color: var(--color-bg);
-}
-
-main a:hover {
-	text-decoration: underline;
-}
-
 footer a {
-	text-decoration: none;
-	color: var(--color-bg);
-
 	mask-image: linear-gradient(-75deg, #000 30%, rgba(0, 0, 0, 0.6) 50%, #000 70%);
 	mask-size: 200%;
 	animation: wave 3s infinite;
-}
-
-footer a:hover {
-	text-decoration: underline;
 }
 
 @keyframes wave {
@@ -106,13 +94,15 @@ input {
 button {
 	padding: 8px;
 
+	font-size: 1rem;
+	color: white;
+
 	border: 1px solid var(--color-bg);
 	border-radius: 2px;
 
-	color: white;
 	background-color: var(--color-active);
 	cursor: pointer;
-	transition: all 0.3s;
+	transition: all 0.3s ease;
 }
 
 button:not(:disabled):hover {
@@ -126,7 +116,7 @@ h4,
 h5,
 h6 {
 	text-align: center;
-	margin-top: 0;
+	margin: 5px 0;
 }
 
 h1 {
@@ -150,8 +140,6 @@ h3 {
 }
 
 .avatar {
-	position: relative;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -169,6 +157,7 @@ h3 {
 	svg {
 		max-width: 70%;
 		max-height: 70%;
+		fill: #fff;
 	}
 
 	strong {
@@ -185,11 +174,19 @@ h3 {
 	gap: 10px;
 }
 
-.login-form {
+.vertical-form {
 	flex-direction: column;
 	gap: 5px;
 
 	min-width: 300px;
+
+	button {
+		background-color: var(--color-bg);
+	}
+
+	textarea {
+		resize: vertical;
+	}
 }
 
 .login-github {
@@ -199,17 +196,19 @@ h3 {
 	gap: 5px;
 
 	width: 100%;
+	background-color: var(--color-bg);
 
 	svg {
 		height: 30px;
 		width: 30px;
+		fill: white;
 	}
 }
 
 .stack {
 	text-align: start;
-}
 
-.stack > li {
-	padding-left: 10px;
+	> li {
+		padding-left: 10px;
+	}
 }
