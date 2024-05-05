@@ -4,7 +4,8 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "prisma generate && next build",
+		"build": "next build",
+		"vercel-build": "npx prisma db push && npx prisma generate && npm run build",
 		"start": "next start",
 		"lint": "next lint",
 		"lint:fix": "eslint -c .eslintrc.cjs . --ext .jsx,.js,.ts,.tsx --quiet --report-unused-disable-directives --fix --ignore-path ./.gitignore",
@@ -12,9 +13,7 @@
 		"prepare": "npm install husky --save-dev && npx husky install",
 		"server": "json-server --watch db.json -p 3300",
 		"dev-with-server": "concurrently \"next dev\" \"json-server --watch db.json -p 3300\"",
-		"prisma:push": "npx prisma push",
-		"prisma:generate": "npx prisma generate",
-		"prisma:seed": "tsx prisma/seed.ts"
+		"seed": "tsx prisma/seed.ts"
 	},
 	"dependencies": {
 		"@prisma/client": "^5.13.0",
