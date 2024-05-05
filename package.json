@@ -12,8 +12,9 @@
 		"prepare": "npm install husky --save-dev && npx husky install",
 		"server": "json-server --watch db.json -p 3300",
 		"dev-with-server": "concurrently \"next dev\" \"json-server --watch db.json -p 3300\"",
-		"prisma-push": "npx prisma push",
-		"prisma-gn": "npx prisma generate"
+		"prisma:push": "npx prisma push",
+		"prisma:generate": "npx prisma generate",
+		"prisma:seed": "tsx prisma/seed.ts"
 	},
 	"dependencies": {
 		"@prisma/client": "^5.13.0",
@@ -24,6 +25,7 @@
 		"react": "^18",
 		"react-dom": "^18",
 		"sqlite3": "^5.1.7",
+		"tsx": "^4.9.1",
 		"zustand": "^4.4.7"
 	},
 	"devDependencies": {
