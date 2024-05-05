@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { apiLinks } from '@shared/model/api';
+import { servicesLinks } from '@shared/model/servicesLinks';
 
 type PropsType = {
 	onSuccess: (id?: number) => Promise<void>;
@@ -12,7 +12,7 @@ function NewPostForm({ onSuccess }: PropsType) {
 
 		const { title, content } = Object.fromEntries(data);
 
-		const response = await fetch(apiLinks.postsJsonServerDb, {
+		const response = await fetch(servicesLinks.jsonServer.posts, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ function NewPostForm({ onSuccess }: PropsType) {
 			<input type='text' name='title' placeholder='title' required />
 			<textarea name='content' placeholder='content' required />
 
-			<button type='submit'>Add post</button>
+			<button type='submit'>Add New Post</button>
 		</form>
 	);
 }

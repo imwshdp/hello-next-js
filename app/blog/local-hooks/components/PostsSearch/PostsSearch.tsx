@@ -1,8 +1,8 @@
 'use client';
 import React, { ChangeEventHandler, FormEventHandler, useState } from 'react';
 
-import { fetchFilteredPosts } from '@shared/api/apiServices';
-import { PostDataType } from '@shared/model/model';
+import { PostDataType } from '@shared/model/types';
+import { apiService } from '@shared/services/apiService';
 
 type PropsType = {
 	onSearch: (value: PostDataType[]) => void;
@@ -17,7 +17,7 @@ function PostsSearch({ onSearch }: PropsType) {
 
 	const handleFormOnSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
 		event.preventDefault();
-		const filteredPosts = await fetchFilteredPosts(search);
+		const filteredPosts = await apiService.local.fetchFilteredPosts(search);
 		onSearch(filteredPosts);
 	};
 

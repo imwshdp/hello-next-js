@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 
 import React from 'react';
 
-import GithubButton from '@components/GithubButton';
-import LoginForm from '@components/LoginForm';
+import GithubButton from '@app/login/components/GithubButton';
+import LoginForm from '@app/login/components/LoginForm';
 
 export const metadata: Metadata = {
 	title: 'next.js log in',

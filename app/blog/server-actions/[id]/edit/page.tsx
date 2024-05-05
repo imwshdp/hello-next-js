@@ -3,16 +3,22 @@ import { redirect } from 'next/navigation';
 
 import React from 'react';
 
-import { fetchPostByIdFromJsonServerDb } from '@shared/api/apiServices';
-import { apiLinks } from '@shared/model/api';
 import { routes } from '@shared/model/routes';
+import { servicesLinks } from '@shared/model/servicesLinks';
+import { apiService } from '@shared/services/apiService';
 
+type PropsType = {
+	params: {
+		id: string;
+	};
+};
+
+// server actions (example with duck structure and bind context)
 async function updatePost(data: FormData) {
 	'use server';
-
 	const { title, content, id } = Object.fromEntries(data);
 
-	const response = await fetch(`${apiLinks.postsJsonServerDb}/${id}`, {
+	const response = await fetch(`${servicesLinks.jsonServer.posts}/${id}`, {
 		method: 'PATCH',
 		headers: {
 			'Content-Type': 'application/json',
@@ -22,21 +28,19 @@ async function updatePost(data: FormData) {
 
 	const post = await response.json();
 
+	revalidatePath(routes.blog.actions);
 	revalidatePath(`${routes.blog.actions}/${post.id}`);
+	revalidatePath(`${routes.blog.actions}/${post.id}/edit`);
+
 	redirect(`${routes.blog.actions}/${post.id}`);
 }
 
-type PropsType = {
-	params: {
-		id: string;
-	};
-};
 async function EditPostPage({ params: { id } }: PropsType) {
-	const post = await fetchPostByIdFromJsonServerDb(id);
+	const post = await apiService.jsonServer.fetchPostById(id);
 
 	return (
 		<div>
-			<h1>Page of editing {post.title}</h1>
+			<h1>Page of Editing {post.title}</h1>
 
 			<form className='vertical-form' action={updatePost.bind(null)}>
 				<input type='text' placeholder='title' required name='title' defaultValue={post.title} />

@@ -5,8 +5,8 @@ import { signOut, useSession } from 'next-auth/react';
 
 import React from 'react';
 
-import { NavLink } from '@shared/model/model';
 import { routes } from '@shared/model/routes';
+import { NavLink } from '@shared/model/types';
 
 type PropsType = {
 	navLinks: NavLink[];

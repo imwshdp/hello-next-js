@@ -2,10 +2,10 @@ import React from 'react';
 
 import { GITHUB_LINK } from '@shared/data/constants';
 
-function Contacts() {
+function Links() {
 	return (
 		<div className='container'>
-			<h2>Project team contacts</h2>
+			<h2>Useful links</h2>
 			<ol>
 				<li>
 					<a href={GITHUB_LINK} target='_blank' rel='noreferrer'>
@@ -17,4 +17,4 @@ function Contacts() {
 	);
 }
 
-export default Contacts;
+export default Links;

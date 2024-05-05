@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 
-import { fetchFilteredPosts, fetchPosts } from '@shared/api/apiServices';
-import { PostDataType } from '@shared/model/model';
+import { PostDataType } from '@shared/model/types';
+import { apiService } from '@shared/services/apiService';
 
 type UsePostsType = {
 	posts: PostDataType[];
@@ -15,12 +15,12 @@ export const usePosts = create<UsePostsType>()((set) => ({
 	loading: false,
 	getAllPosts: async () => {
 		set({ loading: true });
-		const posts = await fetchPosts();
+		const posts = await apiService.local.fetchPosts();
 		set({ posts, loading: false });
 	},
 	getFilteredPosts: async (search) => {
 		set({ loading: true });
-		const posts = await fetchFilteredPosts(search);
+		const posts = await apiService.local.fetchFilteredPosts(search);
 		set({ posts, loading: false });
 	},
 }));

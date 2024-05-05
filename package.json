@@ -11,14 +11,19 @@
 		"lint:format": "prettier --log-level warn --write \"./**/*.{js,jsx,ts,tsx,css,scss,md,json}\" ",
 		"prepare": "npm install husky --save-dev && npx husky install",
 		"server": "json-server --watch db.json -p 3300",
-		"dev-with-server": "concurrently \"next dev\" \"json-server --watch db.json -p 3300\""
+		"dev-with-server": "concurrently \"next dev\" \"json-server --watch db.json -p 3300\"",
+		"prisma-push": "npx prisma push",
+		"prisma-gn": "npx prisma generate"
 	},
 	"dependencies": {
+		"@prisma/client": "^5.13.0",
 		"json-server": "^0.17.4",
 		"next": "14.0.4",
 		"next-auth": "^4.24.5",
+		"prisma": "^5.13.0",
 		"react": "^18",
 		"react-dom": "^18",
+		"sqlite3": "^5.1.7",
 		"zustand": "^4.4.7"
 	},
 	"devDependencies": {

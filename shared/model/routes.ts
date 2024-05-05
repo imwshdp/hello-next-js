@@ -3,16 +3,19 @@ export const routes = {
 
 	about: {
 		root: '/about',
-		contacts: '/about/contacts',
-		team: '/about/team',
+		links: '/about/links',
+		stack: '/about/stack',
 	},
 
 	blog: {
 		root: '/blog',
-		hooks: '/blog/hooks',
-		store: '/blog/stored',
-		actions: '/blog/actions',
-		actionsNew: '/blog/actions/new',
+		hooks: '/blog/local-hooks',
+		store: '/blog/local-store',
+
+		prisma: '/blog/prisma-sqlite',
+
+		actions: '/blog/server-actions',
+		actionsNew: '/blog/server-actions/new',
 	},
 
 	profile: {
@@ -30,11 +33,11 @@ export const navItems = [
 		href: routes.root,
 	},
 	{
-		label: 'Blog',
-		href: routes.blog.root,
-	},
-	{
 		label: 'About',
 		href: routes.about.root,
+	},
+	{
+		label: 'Blog',
+		href: routes.blog.root,
 	},
 ];

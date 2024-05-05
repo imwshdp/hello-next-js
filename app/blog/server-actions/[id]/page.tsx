@@ -5,18 +5,9 @@ import { redirect } from 'next/navigation';
 
 import React from 'react';
 
-import { apiLinks } from '@shared/model/api';
-import { PostDataType } from '@shared/model/model';
 import { routes } from '@shared/model/routes';
-
-async function getPostData(id: number): Promise<PostDataType> {
-	const response = await fetch(`${apiLinks.postsJsonServerDb}/${id}`, {
-		next: {
-			revalidate: 60,
-		},
-	});
-	return response.json();
-}
+import { servicesLinks } from '@shared/model/servicesLinks';
+import { PostDataType } from '@shared/model/types';
 
 type PropsType = {
 	params: {
@@ -30,15 +21,28 @@ export async function generateMetadata({ params: { id } }: PropsType): Promise<M
 	};
 }
 
+const getPostData = async (id: number): Promise<PostDataType> => {
+	const response = await fetch(`${servicesLinks.jsonServer.posts}/${id}`, {
+		next: {
+			revalidate: 60,
+		},
+	});
+	return response.json();
+};
+
+// server actions (example with duck structure and bind context)
 async function removePost(id: string) {
 	'use server';
-	await fetch(`${apiLinks.postsJsonServerDb}/${id}`, {
+	await fetch(`${servicesLinks.jsonServer.posts}/${id}`, {
 		method: 'DELETE',
 		headers: {
 			'Content-Type': 'application/json',
 		},
 	});
 	revalidatePath(routes.blog.actions);
+	revalidatePath(`${routes.blog.actions}/${id}`);
+	revalidatePath(`${routes.blog.actions}/${id}/edit`);
+
 	redirect(routes.blog.actions);
 }
 
@@ -53,7 +57,7 @@ async function ActionsPost({ params: { id } }: PropsType) {
 			</p>
 
 			<p>
-				<Link href={`${routes.blog.actions}/${id}/edit`}>Edit this post</Link>
+				<Link href={`${routes.blog.actions}/${id}/edit`}>Edit This Post</Link>
 			</p>
 
 			{/* bind context for server component */}

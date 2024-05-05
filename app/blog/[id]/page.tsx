@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 
 import React from 'react';
 
-import { apiLinks } from '@shared/model/api';
-import { PostDataType } from '@shared/model/model';
+import { servicesLinks } from '@shared/model/servicesLinks';
+import { PostDataType } from '@shared/model/types';
 
 async function getPostData(id: number): Promise<PostDataType> {
-	const response = await fetch(`${apiLinks.getPosts}/${id}`, {
+	const response = await fetch(`${servicesLinks.local.getPosts}/${id}`, {
 		next: {
 			revalidate: 60,
 		},

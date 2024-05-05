@@ -6,19 +6,20 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<section>
 			<h1>Blog</h1>
-			<ul>
+			<ol>
 				<li>
-					<Link href={routes.blog.hooks}>See fetching variant with hooks</Link>
+					<Link href={routes.blog.hooks}>React state variant</Link>
 				</li>
 				<li>
-					<Link href={routes.blog.store}>See fetching variant with store</Link>
+					<Link href={routes.blog.store}>Zustand store variant</Link>
 				</li>
 				<li>
-					<Link href={routes.blog.actions}>
-						See fetching variant with server actions (be careful: works only on localhost)
-					</Link>
+					<Link href={routes.blog.prisma}>Prisma & sqlite variant</Link>
 				</li>
-			</ul>
+				<li>
+					<Link href={routes.blog.actions}>Server actions variant (Works only on localhost)</Link>
+				</li>
+			</ol>
 			{children}
 		</section>
 	);

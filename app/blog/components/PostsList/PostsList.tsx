@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 import React from 'react';
 
-import { PostDataType } from '@shared/model/model';
 import { routes } from '@shared/model/routes';
+import { PostDataType } from '@shared/model/types';
 
 type PropsType = {
 	posts: PostDataType[];

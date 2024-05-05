@@ -5,12 +5,17 @@
 :root {
 	--color-bg: #2c2c32;
 	--color-active: #0f7dc6;
-
 	--color-active-hover: #0c619a;
 }
 
 body {
+	position: relative;
+	overflow: hidden;
+
+	width: 100vw;
+	height: 100vh;
 	margin: 0;
+
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
 		'Droid Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -36,20 +41,28 @@ nav > a {
 	padding: 0 1rem;
 }
 
+main {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+
+	min-height: calc(100vh - 140px);
+	max-height: calc(100vh - 140px);
+
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+
+	overflow-y: scroll;
+	scrollbar-gutter: stable;
+}
+
 .container {
 	max-width: 900px;
 	padding-left: 2rem;
 	padding-right: 2rem;
 	margin: 0 auto;
-}
 
-main {
-	display: flex;
-	flex-direction: column;
-	min-height: calc(100vh - 140px);
-
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
+	overflow: auto;
 }
 
 footer a {

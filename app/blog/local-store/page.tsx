@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 
 import React from 'react';
 
-import PostsListWithStore from '@components/PostsListWithStore';
-import PostsSearchWithStore from '@components/PostsSearchWithStore';
+import PostsListWithStore from '@app/blog/local-store/components/PostsListWithStore';
+import PostsSearchWithStore from '@app/blog/local-store/components/PostsSearchWithStore';
 
 export const metadata: Metadata = {
 	title: 'next.js blog',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 function BlogWithFetchByStore() {
 	return (
 		<>
-			<h2>Posts (zustand store fetch variation)</h2>
+			<h2>Posts (Zustand Storing)</h2>
 			<PostsSearchWithStore />
 			<PostsListWithStore />
 		</>

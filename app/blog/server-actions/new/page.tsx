@@ -2,9 +2,8 @@ import { redirect } from 'next/navigation';
 
 import React from 'react';
 
+import NewPostForm from '@app/blog/server-actions/components/NewPostForm';
 import { routes } from '@shared/model/routes';
-
-import NewPostForm from '@components/NewPostForm';
 
 function CreateNewPostPage() {
 	return (

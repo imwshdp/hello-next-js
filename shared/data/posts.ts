@@ -1,4 +1,4 @@
-import { PostDataType } from '@shared/model/model';
+import { PostDataType } from '@shared/model/types';
 
 export const posts: PostDataType[] = [
 	{

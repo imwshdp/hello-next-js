@@ -44,6 +44,21 @@
 			"title": "new title 4",
 			"body": "new content 4",
 			"id": 9
+		},
+		{
+			"title": "10 post",
+			"body": "10 post",
+			"id": 10
+		},
+		{
+			"title": "11 post",
+			"body": "11 post",
+			"id": 11
+		},
+		{
+			"title": "12 test",
+			"body": "12 test",
+			"id": 12
 		}
 	]
 }

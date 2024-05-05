@@ -6,8 +6,8 @@ export const metadata: Metadata = {
 	title: 'next.js about',
 };
 
-function About() {
+function StackLayout() {
 	return <></>;
 }
 
-export default About;
+export default StackLayout;
