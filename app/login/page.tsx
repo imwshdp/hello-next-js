@@ -6,7 +6,7 @@ import GithubButton from '@app/login/components/GithubButton';
 import LoginForm from '@app/login/components/LoginForm';
 
 export const metadata: Metadata = {
-	title: 'next.js log in',
+	title: 'Log In Page',
 };
 
 function LogInPage() {

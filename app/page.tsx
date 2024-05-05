@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { GITHUB_ACTIONS_LINK, HUSKY_LINK, NEXT_JS_LINK, YOUTUBE_LINK, ZUSTAND_LINK } from '@shared/data/constants';
+import { YOUTUBE_LINK } from '@shared/data/constants';
 
 function Home() {
 	return (
@@ -15,33 +15,18 @@ function Home() {
 				.
 			</p>
 
-			<h2>Stack:</h2>
-			<ol className='stack'>
-				<li>
-					<a href={`${NEXT_JS_LINK}`} target='_blank' rel='noreferrer'>
-						<strong>Next.js</strong>
-					</a>
-					<span> as full-stack web applications React-based framework</span>
-				</li>
-				<li>
-					<a href={`${ZUSTAND_LINK}`} target='_blank' rel='noreferrer'>
-						<strong>Zustand</strong>
-					</a>
-					<span> for state management</span>
-				</li>
-				<li>
-					<a href={`${HUSKY_LINK}`} target='_blank' rel='noreferrer'>
-						<strong>husky</strong>
-					</a>
-					<span> for git pre-commit hooks</span>
-				</li>
-				<li>
-					<a href={`${GITHUB_ACTIONS_LINK}`} target='_blank' rel='noreferrer'>
-						<strong>GitHub Actions</strong>
-					</a>
-					<span> for CI</span>
-				</li>
-			</ol>
+			<h2>Application Insides</h2>
+			<p>App contains Basics Next.js Features Demo</p>
+			<ul>
+				<li>Client and Server Components</li>
+				<li>Pages Routing with Layout Components (Nested Routing as well)</li>
+				<li>Generating Metadata for Server Components</li>
+				<li>Using Server Actions To Interact with Databases</li>
+				<li>NextAuth.js Authentication (With GitHub Provider)</li>
+				<li>Middleware Setup</li>
+				<li>Several Variants of Data Fetching (Store, States)</li>
+				<li>Several Variants of Data Storing (Json Server, Sqlite Database)</li>
+			</ul>
 		</>
 	);
 }

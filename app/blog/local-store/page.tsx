@@ -6,7 +6,7 @@ import PostsListWithStore from '@app/blog/local-store/components/PostsListWithSt
 import PostsSearchWithStore from '@app/blog/local-store/components/PostsSearchWithStore';
 
 export const metadata: Metadata = {
-	title: 'next.js blog',
+	title: 'Blog Demo | Zustand Store',
 };
 
 function BlogWithFetchByStore() {

@@ -22,7 +22,7 @@ type PropsType = {
 
 export async function generateMetadata({ params: { id } }: PropsType): Promise<Metadata> {
 	return {
-		title: `next.js post #${id}`,
+		title: `Post #${id} Page`,
 	};
 }
 

@@ -12,8 +12,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-	title: 'next.js imwshdp app',
-	description: 'imwshdp hello world next.js app',
+	title: 'Next.js Demo',
+	description: 'Imwshdp Next.js Demo Application',
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {

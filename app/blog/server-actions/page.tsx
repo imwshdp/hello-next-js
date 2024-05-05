@@ -11,7 +11,7 @@ import { GITHUB_DEV_LINK } from '@shared/data/constants';
 // import { apiService } from '@shared/services/apiService';
 
 export const metadata: Metadata = {
-	title: 'next.js blog with server actions',
+	title: 'Blog Demo | Json Server',
 };
 
 export const revalidate = 10;

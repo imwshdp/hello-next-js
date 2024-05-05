@@ -5,3 +5,6 @@ export const ZUSTAND_LINK = 'https://zustand-demo.pmnd.rs/';
 export const HUSKY_LINK = 'https://typicode.github.io/husky/';
 export const GITHUB_ACTIONS_LINK = 'https://docs.github.com/en/actions';
 export const GITHUB_DEV_LINK = 'https://github.com/settings/developers';
+export const NEXT_AUTH_LINK = 'https://next-auth.js.org/';
+export const SQLITE_LINK = 'https://www.sqlite.org/index.html';
+export const PRISMA_LINK = 'https://www.prisma.io/';

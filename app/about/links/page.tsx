@@ -9,7 +9,7 @@ function Links() {
 			<ol>
 				<li>
 					<a href={GITHUB_LINK} target='_blank' rel='noreferrer'>
-						Author github profile
+						My GitHub Profile Link
 					</a>
 				</li>
 			</ol>

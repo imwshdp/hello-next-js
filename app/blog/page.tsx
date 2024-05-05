@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-	title: 'next.js blog',
+	title: 'Blog Demo',
 };
 
 function Blog() {

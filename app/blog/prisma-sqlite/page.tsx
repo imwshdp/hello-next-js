@@ -5,7 +5,7 @@ import { routes } from '@shared/model/routes';
 import { apiService } from '@shared/services/apiService';
 
 export const metadata: Metadata = {
-	title: 'Prisma Sqlite Demo',
+	title: 'Blog Demo | Prisma & Sqlite Db',
 };
 
 async function Blog() {
