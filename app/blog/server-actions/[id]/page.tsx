@@ -46,7 +46,7 @@ async function removePost(id: string) {
 	redirect(routes.blog.actions);
 }
 
-async function ActionsPost({ params: { id } }: PropsType) {
+async function PostPage({ params: { id } }: PropsType) {
 	const post = await getPostData(id);
 
 	return (
@@ -68,4 +68,4 @@ async function ActionsPost({ params: { id } }: PropsType) {
 	);
 }
 
-export default ActionsPost;
+export default PostPage;

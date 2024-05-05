@@ -13,6 +13,7 @@ export const routes = {
 		store: '/blog/local-store',
 
 		prisma: '/blog/prisma-sqlite',
+		prismaNew: '/blog/prisma-sqlite/new',
 
 		actions: '/blog/server-actions',
 		actionsNew: '/blog/server-actions/new',

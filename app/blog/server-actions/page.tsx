@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export const revalidate = 10;
 
-async function BlogWithFetchByHooks() {
+async function BlogWithFetchByServerActions() {
 	// TODO: uncomment
 	// const posts: PostDataType[] = await apiService.jsonServer.fetchPosts();
 
@@ -63,4 +63,4 @@ async function BlogWithFetchByHooks() {
 	);
 }
 
-export default BlogWithFetchByHooks;
+export default BlogWithFetchByServerActions;
